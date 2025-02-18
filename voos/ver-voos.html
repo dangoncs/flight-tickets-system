@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passagens Aéreas</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <div class="menu-icon" id="menuIcon">☰</div>
+        <div class="header-text">Passagens Aéreas</div>
+    </header>
+    <nav id="sidebar">
+        <ul class="menu">
+            <li><a href="../index.html">Página inicial</a></li>
+            <li class="dropdown">
+                <a href="#">Aviões</a>
+                <div class="dropdown-content">
+                    <a href="../avioes/ver-avioes.html">Listar aviões</a>
+                    <a href="../avioes/cadastro-aviao.html">Cadastrar novo avião</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Voos</a>
+                <div class="dropdown-content">
+                    <a class="current-page">Listar voos</a>
+                    <a href="cadastro-voo.html">Cadastrar novo voo</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Passagens</a>
+                <div class="dropdown-content">
+                    <a href="../passagens/ver-reservas.html">Listar reservas de assentos</a>
+                    <a href="../passagens/compra-passagem.html">Comprar passagem</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Relatórios</a>
+                <div class="dropdown-content">
+                    <a href="../relatorios/ocupacao-aeronave.html">Ocupação da aeronave</a>
+                    <a href="../relatorios/passagens-vendidas.html">Passagens vendidas</a>
+                </div>
+            </li>
+        </ul>
+        <div class="logout">
+            <a href="#" id="logoutButton">Fazer logout</a>
+        </div>
+    </nav>
+    <div class="container">
+        <h2>Voos</h2>
+        <form class="search-container">
+            <input type="text" id="search" placeholder="Buscar número do voo, origem ou destino..." required>
+            <button type="submit">Pesquisar</button>
+        </form>
+        <table>
+            <tr>
+                <th>Número do Voo</th>
+                <th>Data</th>
+                <th>Horário</th>
+                <th>Origem</th>
+                <th>Destino</th>
+                <th>Ações</th>
+            </tr>
+            <tr>
+                <td>1234</td>
+                <td>17/02/2025</td>
+                <td>14:00</td>
+                <td>São Paulo</td>
+                <td>Rio de Janeiro</td>
+                <td>
+                    <button onclick="editarVoo(1234)">Editar</button>
+                    <button onclick="excluirVoo(1234)">Excluir</button>
+                </td>
+            </tr>
+            <tr>
+                <td>5678</td>
+                <td>18/02/2025</td>
+                <td>16:30</td>
+                <td>Belo Horizonte</td>
+                <td>Brasília</td>
+                <td>
+                    <button onclick="editarVoo(5678)">Editar</button>
+                    <button onclick="excluirVoo(5678)">Excluir</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

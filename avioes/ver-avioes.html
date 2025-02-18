@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passagens Aéreas</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <div class="menu-icon" id="menuIcon">☰</div>
+        <div class="header-text">Passagens Aéreas</div>
+    </header>
+    <nav id="sidebar">
+        <ul class="menu">
+            <li><a href="../index.html">Página inicial</a></li>
+            <li class="dropdown">
+                <a href="#">Aviões</a>
+                <div class="dropdown-content">
+                    <a class="current-page">Listar aviões</a>
+                    <a href="cadastro-aviao.html">Cadastrar novo avião</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Voos</a>
+                <div class="dropdown-content">
+                    <a href="../voos/ver-voos.html">Listar voos</a>
+                    <a href="../voos/cadastro-voo.html">Cadastrar novo voo</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Passagens</a>
+                <div class="dropdown-content">
+                    <a href="../passagens/ver-reservas.html">Listar reservas de assentos</a>
+                    <a href="../passagens/compra-passagem.html">Comprar passagem</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Relatórios</a>
+                <div class="dropdown-content">
+                    <a href="../relatorios/ocupacao-aeronave.html">Ocupação da aeronave</a>
+                    <a href="../relatorios/passagens-vendidas.html">Passagens vendidas</a>
+                </div>
+            </li>
+        </ul>
+        <div class="logout">
+            <a href="#" id="logoutButton">Fazer logout</a>
+        </div>
+    </nav>
+    <div class="container">
+        <h2>Aviões</h2>
+        <form class="search-container">
+            <input type="text" id="search" placeholder="Buscar por modelo do avião ou registro..." required>
+            <button type="submit">Pesquisar</button>
+        </form>
+        <table>
+            <tr>
+                <th>Registro</th>
+                <th>Modelo</th>
+                <th>Assentos Comuns</th>
+                <th>Assentos Especiais</th>
+                <th>Ações</th>
+            </tr>
+            <tr>
+                <td>BR123</td>
+                <td>Boeing 737</td>
+                <td>180</td>
+                <td>20</td>
+                <td>
+                    <button onclick="editarAviao('BR123')">Editar</button>
+                    <button onclick="excluirAviao('BR123')">Excluir</button>
+                </td>
+            </tr>
+            <tr>
+                <td>BR456</td>
+                <td>Airbus A320</td>
+                <td>160</td>
+                <td>18</td>
+                <td>
+                    <button onclick="editarAviao('BR456')">Editar</button>
+                    <button onclick="excluirAviao('BR456')">Excluir</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

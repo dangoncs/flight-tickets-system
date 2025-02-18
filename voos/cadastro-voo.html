@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passagens Aéreas</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <div class="menu-icon" id="menuIcon">☰</div>
+        <div class="header-text">Passagens Aéreas</div>
+    </header>
+    <nav id="sidebar">
+        <ul class="menu">
+            <li><a href="../index.html">Página inicial</a></li>
+            <li class="dropdown">
+                <a href="#">Aviões</a>
+                <div class="dropdown-content">
+                    <a href="../avioes/ver-avioes.html">Listar aviões</a>
+                    <a href="../avioes/cadastro-aviao.html">Cadastrar novo avião</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Voos</a>
+                <div class="dropdown-content">
+                    <a href="ver-voos.html">Listar voos</a>
+                    <a class="current-page">Cadastrar novo voo</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Passagens</a>
+                <div class="dropdown-content">
+                    <a href="../passagens/ver-reservas.html">Listar reservas de assentos</a>
+                    <a href="../passagens/compra-passagem.html">Comprar passagem</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Relatórios</a>
+                <div class="dropdown-content">
+                    <a href="../relatorios/ocupacao-aeronave.html">Ocupação da aeronave</a>
+                    <a href="../relatorios/passagens-vendidas.html">Passagens vendidas</a>
+                </div>
+            </li>
+        </ul>
+        <div class="logout">
+            <a href="#" id="logoutButton">Fazer logout</a>
+        </div>
+    </nav>
+    <div class="container">
+        <h2>Cadastro de Voo</h2>
+        <form class="input-form">
+            <label for="numero-voo">Número do Voo:</label>
+            <input type="text" id="numero-voo" name="numero-voo" required>
+            
+            <label for="data-viagem">Data da Viagem:</label>
+            <input type="date" id="data-viagem" name="data-viagem" required>
+            
+            <label for="horario-viagem">Horário da Viagem:</label>
+            <input type="time" id="horario-viagem" name="horario-viagem" required>
+            
+            <label for="origem">Local de Origem:</label>
+            <input type="text" id="origem" name="origem" required>
+            
+            <label for="destino">Local de Destino:</label>
+            <input type="text" id="destino" name="destino" required>
+            
+            <label for="valor-normal">Valor da Passagem Comum:</label>
+            <input type="number" id="valor-comum" name="valor-comum" required>
+            
+            <label for="valor-especial">Valor da Passagem Especial:</label>
+            <input type="number" id="valor-especial" name="valor-especial" required>
+            
+            <button type="submit">Cadastrar Voo</button>
+        </form>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

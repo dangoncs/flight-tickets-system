@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passagens Aéreas</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <div class="menu-icon" id="menuIcon">☰</div>
+        <div class="header-text">Passagens Aéreas</div>
+    </header>
+    <nav id="sidebar">
+        <ul class="menu">
+            <li><a href="../index.html">Página inicial</a></li>
+            <li class="dropdown">
+                <a href="#">Aviões</a>
+                <div class="dropdown-content">
+                    <a href="../avioes/ver-avioes.html">Listar aviões</a>
+                    <a href="../avioes/cadastro-aviao.html">Cadastrar novo avião</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Voos</a>
+                <div class="dropdown-content">
+                    <a href="../voos/ver-voos.html">Listar voos</a>
+                    <a href="../voos/cadastro-voo.html">Cadastrar novo voo</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Passagens</a>
+                <div class="dropdown-content">
+                    <a href="ver-reservas.html">Listar reservas de assentos</a>
+                    <a class="current-page">Comprar passagem</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Relatórios</a>
+                <div class="dropdown-content">
+                    <a href="../relatorios/ocupacao-aeronave.html">Ocupação da aeronave</a>
+                    <a href="../relatorios/passagens-vendidas.html">Passagens vendidas</a>
+                </div>
+            </li>
+        </ul>
+        <div class="logout">
+            <a href="#" id="logoutButton">Fazer logout</a>
+        </div>
+    </nav>
+    <div class="container">
+        <h2>Compra de Passagem</h2>
+        <form class="input-form">
+            <label for="assentos">Nome do Comprador:</label>
+            <input type="text" id="assentos" required>
+            <label for="data">Data da Viagem:</label>
+            <input type="date" id="data" required>
+            <label for="horario">Horário da Viagem:</label>
+            <select id="horario" required>
+                <option value="14:00">14:00</option>
+                <option value="16:30">16:30</option>
+            </select>
+            <label for="assentos">Digite o(s) assento(s) desejado(s):</label>
+            <input type="text" id="assentos" placeholder="Ex: 12A, 14B" required>
+            <h3></h3>
+            <table>
+                <tr>
+                    <th>Tipo de assento</th>
+                    <th>Valor por assento</th>
+                    <th>Quantidade</th>
+                    <th>Subtotal</th>
+                </tr>
+                <tr>
+                    <td>Comum</td>
+                    <td>R$450,00</td>
+                    <td>2</td>
+                    <td>R$900,00</td>
+                </tr>
+                <tr>
+                    <td>Especial</td>
+                    <td>R$450,00</td>
+                    <td>0</td>
+                    <td>R$0,00</td>
+                </tr>
+        </table>
+        <h4 style="text-align: right; font-size: larger;">Valor a pagar: R$900,00</h4>
+        <button onclick="reservarAssentos('12A, 14B')">Concluir Compra</button>
+        </form>
+        <!-- <p>Mapa de assentos:</p>
+        <div style="display: flex;">
+            <img src="../assets/assentos-a320.png" alt="Mapa de assentos" style="width: 50%; margin-right: 10px;">
+            <img src="../assets/assentos-a320-2.png" alt="Mapa de assentos" style="width: 50%;">
+        </div> -->
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

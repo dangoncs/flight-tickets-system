@@ -3,153 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compra de Passagens Aéreas</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-            display: flex;
-            min-height: 100vh;
-        }
-        header {
-            background-color: #007bff;
-            color: white;
-            padding: 20px;
-            font-size: 24px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-        }
-        .menu-icon {
-            font-size: 24px;
-            cursor: pointer;
-            color: white;
-            padding: 10px;
-            display: none;
-        }
-        nav {
-            background: #0056b3;
-            width: 250px;
-            height: 100vh;
-            position: fixed;
-            top: 0;
-            left: 0;
-            padding-top: 80px;
-            box-shadow: 2px 0px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-        .menu {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        .menu li {
-            margin: 15px 0;
-        }
-        .menu a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            padding: 10px 20px;
-            display: block;
-            transition: background-color 0.3s ease;
-        }
-        .menu a:hover {
-            background-color: #007bff;
-        }
-        .current-page {
-            font-weight: bold;
-            text-decoration: underline;
-        }
-        .container {
-            margin-left: 250px;
-            margin-top: 80px;
-            padding: 30px;
-            flex-grow: 1;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            max-width: 800px;
-            margin-right: auto;
-        }
-        .container h2 {
-            margin-bottom: 20px;
-            font-size: 32px;
-            color: #007bff;
-        }
-        .container p {
-            font-size: 18px;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-        .features {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-        .feature-button {
-            background-color: #007bff;
-            color: white;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 8px;
-            font-size: 18px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-        }
-        .feature-button:hover {
-            background-color: #0056b3;
-        }
-        footer {
-            text-align: center;
-            padding: 15px;
-            background: #007bff;
-            color: white;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Estilos para dispositivos móveis */
-        @media (max-width: 768px) {
-            .menu-icon {
-                display: block;
-                position: absolute;
-                left: 10px;
-                font-size: 24px;
-                cursor: pointer;
-            }
-            header {
-                justify-content: center;
-            }
-            .header-text {
-                transform: translateX(-20px);
-            }
-            nav {
-                transform: translateX(-250px);
-            }
-            nav.active {
-                transform: translateX(0);
-            }
-            .container {
-                margin-left: 0;
-                margin-top: 80px;
-            }
-        }
-    </style>
+    <title>Passagens Aéreas</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -159,33 +14,50 @@
     <nav id="sidebar">
         <ul class="menu">
             <li><a class="current-page">Página inicial</a></li>
-            <li><a href="cadastro-avioes.html">Cadastro de Aviões</a></li>
-            <li><a href="cadastro-voos.html">Cadastro de Voos</a></li>
-            <li><a href="reserva-assentos.html">Reserva de Assentos</a></li>
-            <li><a href="compra-passagens.html">Compra de Passagens</a></li>
-            <li><a href="relatorios.html">Relatórios</a></li>
+            <li class="dropdown">
+                <a href="#">Aviões</a>
+                <div class="dropdown-content">
+                    <a href="avioes/ver-avioes.html">Listar aviões</a>
+                    <a href="avioes/cadastro-aviao.html">Cadastrar novo avião</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Voos</a>
+                <div class="dropdown-content">
+                    <a href="voos/ver-voos.html">Listar voos</a>
+                    <a href="voos/cadastro-voo.html">Cadastrar novo voo</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Passagens</a>
+                <div class="dropdown-content">
+                    <a href="passagens/ver-reservas.html">Listar reservas de assentos</a>
+                    <a href="passagens/compra-passagem.html">Comprar passagem</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Relatórios</a>
+                <div class="dropdown-content">
+                    <a href="relatorios/ocupacao-aeronave.html">Ocupação da aeronave</a>
+                    <a href="relatorios/passagens-vendidas.html">Passagens vendidas</a>
+                </div>
+            </li>
         </ul>
+        <div class="logout">
+            <a href="#" id="logoutButton">Fazer logout</a>
+        </div>
     </nav>
     <div class="container">
-        <h2>Bem-vindo ao Sistema de Compra de Passagens Aéreas</h2>
-        <p>Escolha uma das opções abaixo para gerenciar cadastros, realizar reservas e comprar passagens.</p>
+        <h2 class="title">Bem-vindo ao Sistema de Compra de Passagens Aéreas</h2>
+        <p class="subtitle">Escolha uma das opções abaixo para gerenciar cadastros e comprar passagens.</p>
         <div class="features">
-            <a href="cadastro-avioes.html" class="feature-button">Cadastro de Aviões</a>
-            <a href="cadastro-voos.html" class="feature-button">Cadastro de Voos</a>
-            <a href="reserva-assentos.html" class="feature-button">Reserva de Assentos</a>
-            <a href="compra-passagens.html" class="feature-button">Compra de Passagens</a>
-            <a href="relatorios.html" class="feature-button">Relatórios</a>
+            <a href="passagens/compra-passagem.html" class="feature-button">Comprar Passagem</a>
+            <a href="avioes/ver-avioes.html" class="feature-button">Gerenciar Aviões</a>
+            <a href="voos/ver-voos.html" class="feature-button">Gerenciar Voos</a>
+            <a href="relatorios/relatorios.html" class="feature-button">Relatórios</a>
         </div>
     </div>
 
-    <script>
-        // Script para alternar o menu hambúrguer
-        const menuIcon = document.getElementById('menuIcon');
-        const sidebar = document.getElementById('sidebar');
-
-        menuIcon.addEventListener('click', () => {
-            sidebar.classList.toggle('active');
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passagens Aéreas</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <div class="menu-icon" id="menuIcon">☰</div>
+        <div class="header-text">Passagens Aéreas</div>
+    </header>
+    <nav id="sidebar">
+        <ul class="menu">
+            <li><a href="../index.html">Página inicial</a></li>
+            <li class="dropdown">
+                <a href="#">Aviões</a>
+                <div class="dropdown-content">
+                    <a href="../avioes/ver-avioes.html">Listar aviões</a>
+                    <a href="../avioes/cadastro-aviao.html">Cadastrar novo avião</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Voos</a>
+                <div class="dropdown-content">
+                    <a href="../voos/ver-voos.html">Listar voos</a>
+                    <a href="../voos/cadastro-voo.html">Cadastrar novo voo</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Passagens</a>
+                <div class="dropdown-content">
+                    <a href="../passagens/ver-reservas.html">Listar reservas de assentos</a>
+                    <a href="../passagens/compra-passagem.html">Comprar passagem</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a class="current-page">Relatórios</a>
+                <div class="dropdown-content">
+                    <a href="ocupacao-aeronave.html">Ocupação da aeronave</a>
+                    <a href="passagens-vendidas.html">Passagens vendidas</a>
+                </div>
+            </li>
+        </ul>
+        <div class="logout">
+            <a href="#" id="logoutButton">Fazer logout</a>
+        </div>
+    </nav>
+    <div class="container">
+        <h2>Relatórios</h2>
+        <p class="subtitle">Escolha uma das opções abaixo para visualizar a informação desejada.</p>
+        <div class="features">
+            <a href="ocupacao-aeronave.html" class="feature-button">Relatório de Ocupação da Aeronave</a>
+            <a href="passagens-vendidas.html" class="feature-button">Relatório de Passagens Vendidas</a>
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>
