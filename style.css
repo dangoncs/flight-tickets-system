@@ -195,6 +195,9 @@ button:hover {
 label, input, img {
     margin-bottom: 10px;
 }
+.required {
+    color: red;
+}
 table {
     width: 100%;
     border-collapse: collapse;

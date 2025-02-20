@@ -50,16 +50,16 @@
     <div class="container">
         <h2>Compra de Passagem</h2>
         <form class="input-form">
-            <label for="assentos">Nome do Comprador:</label>
+            <label for="assentos">Nome do Comprador: <span class="required">*</span></label>
             <input type="text" id="assentos" required>
-            <label for="data">Data da Viagem:</label>
+            <label for="data">Data da Viagem: <span class="required">*</span></label>
             <input type="date" id="data" required>
-            <label for="horario">Horário da Viagem:</label>
+            <label for="horario">Horário da Viagem: <span class="required">*</span></label>
             <select id="horario" required>
                 <option value="14:00">14:00</option>
                 <option value="16:30">16:30</option>
             </select>
-            <label for="assentos">Digite o(s) assento(s) desejado(s):</label>
+            <label for="assentos">Digite o(s) assento(s) desejado(s): <span class="required">*</span></label>
             <input type="text" id="assentos" placeholder="Ex: 12A, 14B" required>
             <h3></h3>
             <table>
@@ -83,7 +83,7 @@
                 </tr>
         </table>
         <h4 style="text-align: right; font-size: larger;">Valor a pagar: R$900,00</h4>
-        <button onclick="reservarAssentos('12A, 14B')">Concluir Compra</button>
+        <button onclick="reservarAssentos('12A, 14B')"><b>CONCLUIR COMPRA</b></button>
         </form>
         <!-- <p>Mapa de assentos:</p>
         <div style="display: flex;">
